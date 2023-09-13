@@ -11,8 +11,8 @@
 
     - name: set facts
       ansible.builtin.set_fact:
-        total: "{{ FREE[1] }}"
-        free: "{{ FREE[3] }}"
+        total: "{{ FREE[1] |int }}"
+        free: "{{ FREE[3] |int }}"
 
     - name: Print free output
       ansible.builtin.debug:
