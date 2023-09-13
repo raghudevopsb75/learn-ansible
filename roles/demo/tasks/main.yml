@@ -1,0 +1,4 @@
+- name: Print role variable
+  ansible.builtin.debug:
+    msg: "URL = {{URL}}"
+
