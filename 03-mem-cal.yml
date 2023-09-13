@@ -7,7 +7,5 @@
 
     - name: Print free variable
       ansible.builtin.debug:
-        msg: "{{ input[0] }}
-      vars:
-        input: "{{free.stdout | split(' ')}}"
+        msg: "{{free.stdout | split(' ') | first }}"
 
