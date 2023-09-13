@@ -9,7 +9,11 @@
       ansible.builtin.set_fact:
         FREE: "{{ free.stdout | split(' ') }}"
 
-    - name: Print free variable
-      ansible.builtin.debug:
-        msg: "{{ FREE[1] }}"
+    - name: set facts
+      ansible.builtin.set_fact:
+        total: "{{ FREE[1] }}"
+        free: "{{ FREE[3] }}"
 
+    - name: Print free output
+      ansible.builtin.debug:
+        msg: "{{ free / total }}
