@@ -29,7 +29,7 @@
 
     - name: Print play variable
       ansible.builtin.debug:
-        msg: "{{ URL1 }}"
+        msg: "{{ URL }}"
 
 - name: Demo on roles variables
   hosts: localhost
