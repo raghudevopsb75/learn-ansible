@@ -1,8 +1,6 @@
 - name: Test on template
   hosts: all
-  tasks:
-    - name: Copy file
-      ansible.builtin.copy:
-        src: test.txt
-        dest: /tmp/test.txt
+  roles:
+    - demo
+
 
